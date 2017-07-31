@@ -2,20 +2,22 @@ require_relative '../lib/stockpicker.rb'
 require 'spec_helper'
 
 describe StockPicker do
+
+  let(:stockpicker) { described_class.new }
+  let(:nine_values) { described_class.new([44, 30, 24, 32, 35, 30, 40, 38, 15]) }
+
   describe '#initialize' do
-    it 'something'
+    it 'creates the prices array' do
+      expect(nine_values.prices).to eq([44, 30, 24, 32, 35, 30, 40, 38, 15])
+    end
   end
 
-  describe '#optimal_purchase' do
-    it 'raises an error if'
+  describe '#picker' do
+    it 'says to buy day 0 and sell day 2 from [2, 7, 17, 1]'
   end
 
-  describe '#optimal_sale' do
-    it 'choses to sell when net profit is 4 versus 3'
-  end
-
-  describe '#calculate_profit' do
-    it 'raises an error if profit is negative'
+  describe '#profit' do
+    it 'rasies an error if profit is negative'
   end
   
 end

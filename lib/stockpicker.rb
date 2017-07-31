@@ -1,31 +1,24 @@
 # Quit thinking about sorting algorithms
 # the problem is too small to have a noticeable 
 # performance improvement
+# 1) find all pairs of eligible days, 2) find the pair of days with the highest profit
 
 class StockPicker
-  attr_reader :day, :price
-  
-  def initialize(day, price)
-    @day = day
-    @price = price
+  attr_reader :prices
+
+  def initialize(prices)
+    @prices = prices
   end
 
-  def hash 
-    @day.hash ^ @price.hash
+  def picker
+    ((0...@prices.length).to_a)
+      .repeated_permutation(2)
+      .select {|start, finish| finish > start}
+      .max_by {|start, finish| @prices[finish] - @prices[start]}
   end
 
-  def optimal_purchase
-    # find cheapest day to buy
+  def profit
+    # stuff here
   end
 
-  def optimal_sale
-    # uses optimal_purchase
-    # stuff here for finding day to sell stock
-    # effectively optimal stopping with full data set
-  end
-
-  def calculate_profit
-    # substract total money spent from sell price
-    # to calculate net profit
-  end
 end
