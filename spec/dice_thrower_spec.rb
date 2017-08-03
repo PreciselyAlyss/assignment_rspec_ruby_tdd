@@ -10,11 +10,15 @@ describe Game do
     it 'creates player with name Eve' do
       expect(eve.name).to eq("Eve")
     end
+
+    it 'has a score variable with a value of 0' # do
+      # expect(eve.score).to eq(0)
+    # end
   end
 
   describe '#start' do
     it 'says "Game Start"' do
-      expect(game.start).to eq("Game Start")
+      expect(game.start).to output.to_stdout
     end
   end
 
@@ -26,8 +30,4 @@ describe Game do
     it 'something'
   end
 
-  describe '#score' do
-    it 'has a value for score variable'
-  end
-  
 end
