@@ -59,7 +59,6 @@ PLATFORMS
 
 DEPENDENCIES
   guard-rspec
-  pry
   rspec
 
 BUNDLED WITH

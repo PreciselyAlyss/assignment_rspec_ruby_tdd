@@ -1,4 +1,4 @@
-require_relative '../lib/dice_thrower.rb'
+require'./lib/dice_thrower.rb'
 require 'spec_helper'
 
 describe Game do 
@@ -20,10 +20,6 @@ describe Game do
     it 'says "Game Start"' do
       expect(game.start).to output.to_stdout
     end
-  end
-
-  describe '#roll' do
-    it 'something'
   end
 
   describe '#game' do

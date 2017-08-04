@@ -1,6 +1,6 @@
 require_relative 'player'
 
-class Computer > Player
+class Computer < Player
   def initialize
     super
   end

@@ -30,3 +30,4 @@ end
 solve = Anagrams.new("looter", %w(spooky retool rootle tooler toddler))
 solve.anagram_solve
 solve.results
+
