@@ -1,12 +1,11 @@
 require_relative 'player'
-require_relative 'computer'
 
 class Game
 attr_reader :user, :computer, :score, :dice
 
   def initialize(player = Player.new("Arya"))
     @user = player
-    @computer = Computer.new("GLaDOS")
+    @computer = Player.new("GLaDOS")
     @score = []
     @dice = 0
   end

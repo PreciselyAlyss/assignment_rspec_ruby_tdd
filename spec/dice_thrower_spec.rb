@@ -8,17 +8,17 @@ describe Game do
 
   describe '#initalize' do
     it 'creates player with name Eve' do
-      expect(eve.name).to eq("Eve")
+      expect(eve.user).to eq("Eve")
     end
 
-    it 'has a score variable with a value of 0' # do
-      # expect(eve.score).to eq(0)
-    # end
+    it 'has a score variable to be an empty array' do
+      expect(eve.score).to eq([])
+    end
   end
 
   describe '#start' do
-    it 'says "Game Start"' do
-      expect(game.start).to output.to_stdout
+    it 'begins the game with the message "Welcome"' do
+      expect(game.start).to start_with("Welcome")
     end
   end
 
